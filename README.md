@@ -10,6 +10,7 @@ Metamount is your friendly neighborhood IPFS file fetcher. It's like a butler fo
 
 - 🎯 Fetch files from IPFS with a simple HTTP request
 - 🔍 Automatic content-type detection (it's like having a file detective!)
+- 📁 Beautiful directory listings with file/folder icons
 - ⚡ Fast and furious (well, as fast as IPFS can be)
 - 🛡️ CORS enabled (because sharing is caring)
 - 🕒 30-second timeout (because patience is a virtue, but not an infinite one)
@@ -38,9 +39,17 @@ pnpm start
 
 ## How to Use 🎮
 
-Just make a GET request to `/:hash` where `:hash` is your IPFS hash. For example:
+Just make a GET request to `/:hash` or `/:hash/path/to/file` where:
+- `:hash` is your IPFS hash
+- `/path/to/file` is optional and represents the path within the IPFS directory
+
+Examples:
 ```
+# Simple hash
 GET http://localhost:3000/QmHash123...
+
+# Hash with subfolder path
+GET http://localhost:3000/bafybeiaxqghsrgqqo677k6emb4asgnhbvxupvff5in2vvk3dixacep4nga/4aa52238-af54-404a-b8c6-d4703dccafee.png
 ```
 
 Want to check if the server is alive? Hit the root endpoint:
