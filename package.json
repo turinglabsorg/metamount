@@ -1,0 +1,26 @@
+{
+  "name": "metamount",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_OPTIONS='--no-warnings --loader ts-node/esm' ts-node --project tsconfig.node.json ./lambda.ts",
+    "dev:local": "NODE_OPTIONS='--no-warnings --loader ts-node/esm' nodemon --exec 'ts-node --project tsconfig.node.json' --ignore 'cli/**' ./lambda.ts",
+    "cli": "ts-node"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.29",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "file-type": "^21.0.0",
+    "load-esm": "^1.0.2"
+  }
+}
