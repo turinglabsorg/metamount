@@ -38,6 +38,10 @@ app.get("/:hash", async function (req, res) {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Health Check.");
+});
+
 app.listen(3000, () => {
   console.log(`Metamount running.`);
 });
